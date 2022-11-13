@@ -1,0 +1,332 @@
+@import url(./reset.css);
+
+* {
+    /* outline: 1px dashed #bdc3c7; */
+}
+
+/* Defaults */
+.logo img {
+    width: 100%;
+}
+
+/* Main Navigation */
+#mobile-view-menu {
+    display: none;
+}
+
+#main-navbar {
+    position: sticky;
+    top: 0;
+    height: 100px;
+    background-color: #ecf0f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    font-size: 1.2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
+}
+
+#brand {
+    width: 70px;
+    margin-left: 2em;
+}
+
+#pages-menu, #auth-menu {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+#main-navbar a:not(#brand a), #main-navbar .collapse {
+    height: 100px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+#main-navbar a:not(#brand a):hover, #main-navbar .collapse:hover {
+    color: #FF1D25;
+    background-color: #333;
+}
+
+.collapse {
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.collapse + ul {
+    position: absolute;
+    z-index: 1;
+    top: -9999px;
+    background-color: #333;
+}
+
+#main-navbar > .pages-menu-container > #pages-menu > li > .collapse + ul > li > a {
+    color: #fff;
+}
+
+#main-navbar > .pages-menu-container > #pages-menu > li > .collapse + ul > li > a:hover {
+    background-color: #FF1D25;
+    color: #333;
+}
+
+.collapse:hover + ul, .collapse +ul:hover {
+    top: 100px;
+}
+
+
+/* Header */
+#main-header:before {
+    display: block;
+    content: " ";
+    background-color: rgba(255, 255, 255, 0.35);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(5px);
+}
+
+#main-header {
+    position: relative;
+    height: 500px;
+    background-image: url(../images/daniel-watson-8vBpYpTGo90-unsplash@3.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    color: #fff;
+    text-shadow: 0px 4px 3px rgba(0,0,0,1),
+                 0px 8px 13px rgba(0,0,0,0.5),
+                 0px 18px 23px rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+#logo img {
+    height: 400px;
+}
+
+#main-title {
+    text-align: center;
+}
+
+#main-header h1 {
+    font-size: 5.4em;
+}
+
+#main-header h2 {
+    font-size: 2.1em;
+}
+
+/* Main */
+main {
+    column-count: 3;
+    padding: 1em;
+}
+
+main > article {
+    padding: 1em;
+    border: 1px solid #FF1D25;
+}
+
+main h2 {
+    font-size: 1.6em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.1em;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+main p {
+    line-height: 1.2em;
+}
+
+main footer {
+    margin-top: 1em;
+    text-align: center;
+}
+
+main footer a {
+    display: inline-block;
+    background-color: #FF1D25;
+    padding: 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.5s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main footer a:hover {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+/* Aside */
+aside {
+    width: 300px;
+    position: absolute;
+    top: 100px;
+    left: -320px;
+    z-index: 100;
+    background: #333;
+    color: #fff;
+    padding: 1em;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    transition: 1s;
+    line-height: 1.5em;
+}
+
+aside h2 {
+    font-size: 1.8em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1em;
+}
+
+aside hr {
+    margin-bottom: 2em;
+}
+
+aside h3 {
+    font-size: 1.4em;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 1em;
+}
+
+aside article {
+    margin: 1em 0;
+    padding: 1em;
+    border-bottom: 1px solid #fff;
+}
+
+aside a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+aside a:after {
+    content: " >"
+}
+
+aside a:hover {
+    color: #FF1D25;
+}
+
+#aside-trigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    transform: translateY(-120px);
+    top: 50%;
+    left: 300px;
+    background-color: #333;
+    border-radius: 0 30px 30px 0;
+    transition: 0.5s;
+    z-index: 200;
+}
+
+#aside-trigger:after {
+    content: ">";
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+aside:has(#aside-trigger:hover), aside:hover {
+    left: 0;
+}
+
+/* Footer */
+body > footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #ecf0f1;
+    padding: 1em;
+}
+
+body > footer address {
+    width: 50%;
+}
+
+body > footer nav {
+    width: 50%;
+}
+
+body #footer-menus {
+    width: 100%;
+}
+
+body > footer img {
+    max-width: 80px;
+}
+
+body > footer .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    color: #333;
+    line-height: 1.4em;
+    width: 100%;
+}
+
+body footer h3 {
+    width: 100%;
+    font-size: 1.4em;
+    border-bottom: 1px solid #333;
+}
+
+body > footer .row nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+body > footer #footer-menus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+body > footer #footer-menus ul {
+    width: 50%;
+}
+
+body > footer a {
+    color: #FF1D25;
+    text-decoration: none;
+}
+
+body > footer a:hover {
+    color: #c0392b;
+}
+
+#company {
+    display: none;
+}

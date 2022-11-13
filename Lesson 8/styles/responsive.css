@@ -1,0 +1,157 @@
+@media only screen and (min-width: 1280px) {
+    .content {
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    main {
+        width: 70%;
+        order: 2;
+    }
+
+    aside {
+        position: inherit;
+        width: 30%;
+        box-shadow: none;
+        order: 1;
+    }
+
+    #aside-trigger {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    /* RESET */
+    #pages-menu {
+        display: block;
+    }
+
+    #main-navbar .collapse {
+        display: block;
+    }
+
+    #main-navbar > .pages-menu-container > #pages-menu > li > span.collapse {
+        display: none;
+    }
+
+    .collapse + ul {
+        position: inherit;
+    }
+
+    #main-navbar > .pages-menu-container > #pages-menu > li > a, #main-navbar > .pages-menu-container > #pages-menu > li > .collapse + ul > li > a {
+        color: #333;
+        display: inline-block;
+        height: auto;
+    }
+
+    #mobile-view-menu {
+        display: block;
+    }
+
+    /* Collapsed Menu */
+
+    #main-navbar, #main-navbar a:not(#brand a) {
+        height: 60px;
+    }
+
+    #brand {
+        width: 50px;
+    }
+    
+    .pages-menu-container {
+        position: relative;
+        background-color: #ecf0f1;
+    }
+
+    #pages-menu {
+        height: auto;
+        position: absolute;
+        top: -9999px;
+        left: -132%;
+        min-width: 300px;
+        background-color: #ecf0f1;
+    }
+
+    #main-navbar > .pages-menu-container > #pages-menu > li > .collapse + ul {
+        background-color: #ecf0f1;
+    }
+
+    #pages-menu li {
+        /* background: #ecf0f1; */
+        text-align: center;
+        margin: 0;
+    }
+
+
+
+    #main-navbar > .pages-menu-container > #pages-menu > li > a, #main-navbar > .pages-menu-container > #pages-menu > li > .collapse + ul > li > a {
+        padding: 1em;
+        width: 100%;
+    }
+
+    #main-navbar > .pages-menu-container > #pages-menu > li > a:hover, #main-navbar > .pages-menu-container > #pages-menu > li > .collapse + ul > li > a:hover {
+        background-color: #333;
+        color: #FF1D25;
+    }
+    
+    #mobile-view-menu:hover + #pages-menu, #pages-menu:hover {
+        top: 60px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    main {
+        column-count: auto;
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        flex-wrap: wrap;
+    }
+
+    main>article {
+        max-width: 350px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #main-header {
+        display: inherit;
+        height: auto;
+        text-align: center;
+        font-size: 70%;
+    }
+
+    #logo {
+        height: 200px;
+        padding: 1em;
+    }
+
+    #logo img {
+        display: inline-block;
+        height: 100%;
+    }
+
+
+
+    .content {
+        display: block;        
+    }
+
+    aside {
+        position: inherit;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    #aside-trigger {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #brand {
+        display: none;
+    }
+}
